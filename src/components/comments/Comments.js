@@ -5,8 +5,8 @@ import classes from "./Comments.module.css";
 
 import NewCommentForm from "./NewCommentForm";
 import useHttp from "../../hooks/use-http";
-import { getAllComents } from "../../lib/api";
-import LoadingSpinner from "../ui/LoadingSpinner";
+import { getAllComments } from "../../lib/api";
+import LoadingSpinner from "../UI/LoadingSpinner";
 import CommentsList from "./CommentsList";
 
 const Comments = () => {
@@ -15,7 +15,7 @@ const Comments = () => {
 
   const { quoteId } = params;
 
-  const { sendRequest, status, data: loadedComments } = useHttp(getAllComents);
+  const { sendRequest, status, data: loadedComments } = useHttp(getAllComments);
 
   useEffect(() => {
     sendRequest(quoteId);

@@ -15,11 +15,12 @@ const NewQuote = () => {
     }
   }, [status, history]);
 
-  const addQuotedHandler = (quoteData) => {
+  const addQuoteHandler = (quoteData) => {
     sendRequest(quoteData);
   };
+
   return (
-    <QuoteForm isLoading={status === "pending"} onAddQuote={addQuotedHandler} />
+    <QuoteForm isLoading={status === "pending"} onAddQuote={addQuoteHandler} />
   );
 };
 

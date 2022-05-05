@@ -1,11 +1,11 @@
 import { Fragment, useEffect } from "react";
-import { useParams, Route, Link, useRouterMatch } from "react-router-dom";
+import { useParams, Route, Link, useRouteMatch } from "react-router-dom";
 import useHttp from "../hooks/use-http";
 import { getSingleQuote } from "../lib/api";
 import HighlightedQuote from "../components/quotes/HighlightedQuote";
 
 import Comments from "../components/comments/Comments";
-import LoadingSpinner from "../components/ui/LoadingSpinner";
+import LoadingSpinner from "../components/UI/LoadingSpinner";
 
 // const DUMMY_QUOTES = [
 //   { id: "q1", author: "Max", text: "Learning React is fun" },
@@ -13,7 +13,7 @@ import LoadingSpinner from "../components/ui/LoadingSpinner";
 // ];
 
 const QuoteDetail = () => {
-  const match = useRouterMatch();
+  const match = useRouteMatch();
   const params = useParams();
 
   const { quoteId } = params;
